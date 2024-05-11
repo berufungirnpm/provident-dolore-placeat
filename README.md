@@ -1,3 +1,30 @@
-The algorithm continuously evaluates and scores open source software projects in supported package managers based on their impact and value to the OSS ecosystem.
+# @berufungirnpm/provident-dolore-placeat
+Like a JavaScript Set() but with a TTL for entries.
 
-Simple support tea in reguide template can increase for an open source software project with an increasing number of dependents
+In difference to other caches with TTLs out there, this one does not need intervals or timeouts to work.
+This means it can be properly garbage collected when there is no more reference to the instance.
+
+
+## Usage
+
+
+```ts
+
+import { ObliviousSet } from '@berufungirnpm/provident-dolore-placeat';
+
+// create a set
+const obliviousSet = new ObliviousSet(
+    100 // TTL in milliseconds
+);
+
+// add a value
+obliviousSet.add('foobar');
+
+// check existence
+console.log(obliviousSet.has('foobar')); // > true
+console.log(obliviousSet.has('barfoo')); // > false
+
+
+// clear
+obliviousSet.clear();
+```
